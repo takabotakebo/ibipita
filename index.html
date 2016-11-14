@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>IBPTtoppage</title>
+    <link rel="stylesheet" type="text/css" href="css/top.css">
+<script src="lib/jquery/jquery-3.1.0.min.js"></script>
+    <script>
+     jQuery(function ($) {
+           $().ready(function(){
+                    $("#loginform").hide();
+                    
+				});
+         
+         $("#loginbar").hover(function () {
+        $("#loginform").fadeIn();
+        $("#loginbar").hide();
+    });  
+        
+          $("#mainview").hover(function () {
+        $("#loginbar").fadeIn();
+        $("#loginform").fadeOut();
+    }); 
+         
+         $("#scrollbtn").click(function () {
+        $("html,body").animate({scrollTop:800},"slow");
+    }); 
+         
+         $("#headlogo").click(function () {
+        $("html,body").animate({scrollTop:0},"slow");
+    });
+         
+        });
+    </script>
+</head>
+    
+<body>
+    
+    <div id="wrapper">
+        <!--ヘッダーのバーです。-->
+          <header>
+              <img src="img/toplogo.png" id="headlogo" class="content">
+              <h1>いびぴた</h1>
+              <div class="shift" >新規登録</div>
+              <div class="shift" id="scrollbtn">サービス概要</div>
+          </header>
+
+
+        <!--横から出てくるログインフォームです-->
+          <div id="loginform">
+              <div id="logintext">
+              <p class="loginfo">すでにアカウントを</p>
+              <p class="loginfo">もっている方へ</p>
+              <form>
+                  <div class="form-group">
+                        <p>ID</p>
+                        <input id="usrid" type="text" name="usrid">
+                  </div>
+                  <div class="form-group">
+                        <p>PASS</p>
+                        <input id="usrpass" type="text" name="usrpass">
+                  </div>
+
+                  <a href="home.html"><img id="loginbtn" src="img/loginbtn.png"></a>
+              </form>
+              </div>
+          </div>
+
+          <!--横から出てくる前のログインフォームのバーです-->
+          <div id="loginbar">
+          </div>
+
+         <!--バー以外のボディー-->
+               <div id="mainview">
+               <!--キャッチコピーなどの箱-->
+                     <div id="startinfo">
+                          <div id="copy">
+                              <h2>眠る前の安心を届ける</h2>
+                              <div id="infomess">
+                                  <p class="mess">「いびぴた」はあなたのいびきを予測する</p>
+                                  <p class="mess">サービスです。karadafitや波形分析などから</p>
+                                  <p class="mess">得られるデータを元にいびきを解析し</p>
+                                  <p class="mess">事前の対策を可能にします</p>
+                              </div>
+                              
+                          </div>
+
+                         <div id="startupbtn">
+                             <img src="img/startbtn.png" class="startbtn">
+                         </div>
+
+                         <div id="startupmess">
+                             <p>→すでにアカウントをお持ちの方</p>
+                         </div>
+
+                      </div>
+
+                    <!--サービス概要の箱-->
+                      <div id="aboutservice" class="content">
+                          
+                          <div id="aboutbox">
+                              <div id="about1">
+                                  <img class="icon" src="img/per.png">
+                                  <h3>予測</h3>
+                                  <p class="aboutinfo">日々の計測をもとに、今夜のいびき確率を算出します。その時に適した対策を行うことでいびきの確率を下げることができます。</p>
+                              </div>
+
+                              <div id="about2">
+                                  <img class="icon" src="img/cal.png">
+                                  <h3>記録</h3>
+                                  <p class="aboutinfo">毎日のいびきを記録していきその変化を視覚的に体感することができます</p>
+                              </div>
+
+                              <div id="about3">
+                                  <img class="icon" src="img/mic.png">
+                                  <h3>解析</h3>
+                                  <p class="aboutinfo">いびきを録音することで波形その波形からいびきの回数や時間、無呼吸症候群の可能性を算出します。</p>
+                              </div>
+                          </div>
+                          
+                          <div id="footer">
+                              <p>mtidevintern-tearm3=Cteam</p>
+                          </div>
+                      </div>
+                </div>
+    </div>
+    </body>
+</html>

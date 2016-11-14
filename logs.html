@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBPTtoppage</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="lib/jquery/jquery-3.1.0.min.js"></script>
+    <script src="lib/highcharts/highcharts.js"></script>
+    <script type="text/javascript">
+var j = jQuery.noConflict();
+var graphXCategory = [],graphWSteps = [100,200,100,400,200,0,0],graphTCal = [40,50,20,30,30,0,0];
+
+for (var i = 0; i <7; i++) {
+graphXCategory.push("2016090"+i);
+}
+
+(function(j){
+j(function () {
+    j('#graph').highcharts({//ここから描画の実行内容
+
+chart: {
+  zoomType: 'xy'
+},
+title: {
+  text: 'いびき率といびき数'
+},
+xAxis: [{
+  categories: graphXCategory,
+  crosshair: true
+}],
+
+
+yAxis: [{ // Primary yAxis
+  labels: {
+    format: '{value}%',
+    style: {
+      color: Highcharts.getOptions().colors[1]
+    }
+  },
+
+  title: {
+    text: 'いびき率',
+    style: {
+      color: Highcharts.getOptions().colors[1]
+    }
+  }
+}, { // Secondary yAxis
+  title: {
+    text: 'いびき数',
+    style: {
+      color: Highcharts.getOptions().colors[0]
+    }
+  },
+  labels: {
+    format: '{value} 回',
+    style: {
+      color: Highcharts.getOptions().colors[0]
+    }
+  },
+  opposite: true
+}],
+tooltip: {
+  shared: true
+},
+legend: {
+  layout: 'vertical',
+  align: 'left',
+  x: 120,
+  verticalAlign: 'top',
+  y: 100,
+  floating: true,
+  backgroundColor: (Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'
+},
+series: [{
+  name: 'いびき数',
+  type: 'column',
+  yAxis: 1,
+  data: graphWSteps,
+  tooltip: {
+    valueSuffix: ' 回'
+  }
+
+}, {
+  name: 'いびき率',
+  type: 'spline',
+  data: graphTCal,
+  tooltip: {
+    valueSuffix: ' %'
+  }
+}]
+    });
+});
+})(j);
+
+</script>
+   
+</head>
+<body>
+    
+    <div id="wrapper">
+    
+<!--ヘッダーのバーです。-->  
+  <header>
+      <img src="img/toplogo.png" id="headlogo">
+              
+              <h1>いびぴた</h1>
+              <a href="index.html">
+              <img id="logoutbtn" src="img/logoutbtn.png"></a>
+              <div class="shift"><a href="home.html">設定</a></div>
+              <div class="shift"><a href="home.html">ホーム</a></div>
+          </header>
+
+<!--バー以外のボディー-->
+    <div id="mainview">
+         <!--中のコンテンツ変更用のボタン-->   
+         <div id="switchbtns">
+            <a href="logs.html"><div id="switchbtn1"><img src="img/switchbtn7.png" class="btn"></div></a>
+            <div id="switchbtn2"><img src="img/switchbtn31.png" class="btn"></div>
+         </div>
+        
+ <!--コンテンツ-->
+    <div id="contents">
+
+
+    <div id="logs">
+      <div id = "datebox">2016/09/01～2016/09/07のデータ</div>
+      <div id="graph">
+        <!-- 取得結果をグラフで表示する領域 -->
+      </div>
+
+    </div>
+        </div> 
+    </div>
+    </div>
+  </body>
+</html>

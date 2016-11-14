@@ -1,0 +1,257 @@
+
+
+#wrapper{
+    position: relative;
+    height: 1250px;
+    width: 100%;
+    background-image: url(../img/indexbg.jpg);
+    background-attachment: fixed;
+    
+    
+}
+
+
+/* ヘッダーバー */
+
+header{
+    position: fixed;
+    width: 100%;
+    height: 93px;
+    background-color:white;
+    z-index: 2;
+}
+
+#headlogo{
+    position: relative;
+    height: 70%;
+    float: left;
+    margin-left: 90px;
+    margin-top: 11px;
+}
+
+h1{position: relative;
+    float: left;
+    font-family:;
+    color: dimgray;
+    margin-left: 10px;
+    
+}
+
+.shift{
+    position: relative;
+    float: right;
+    margin-right: 4%;
+    font-family: '遊ゴシック';
+    font-size: 20px;
+    color:#5A5959;
+    font-weight:;
+    margin-top: 35px;
+}
+
+
+
+
+/* ログインバー（未） */
+
+#loginbar{
+    position:fixed;
+    z-index:3;
+    height:900px;
+    width: 61px;
+    top: 0px;
+    background-image:url(../img/loginbar1.png);
+}
+
+
+#loginform{
+    position: fixed;
+    width:300px;
+    height: 800px;
+    top: 0px;
+    background-image: url(../img/bar.png);
+    z-index: 10;
+}
+
+#loginform p{
+    color: white;
+    float: 
+    
+}
+
+.loginfo{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#logintext{
+    position: relative;
+    float: right;
+    width:200px;
+    margin-right: 60px;
+    margin-top: 220px;
+}
+
+#loginbtn{
+    position: relative;
+    width: 150px;
+    height: auto;
+    margin-top: 30px;
+}
+
+/* mainview */
+
+#mainview{position: relative;
+    float: left;
+    width: 96%;
+    height: 707px;
+    margin-left: 60px;
+    margin-top:93px ;
+}
+
+#startinfo{
+    position: relative;
+    float: left;
+    width: 50%;
+    height: 500px;
+    margin-left: 50px;
+    margin-top: 90px;
+}
+
+h2{
+    font-size: 63px;
+    color:#273037;
+    margin-left: %;
+    font-family: '遊ゴシック';
+}
+
+#infomess{
+    position: relative;
+    margin-top: -40px;
+    margin-left: 0px;
+}
+
+#startinfo .mess{
+    position: relative;
+    margin-top:-15px;
+    font-family: '遊ゴシック';
+    font-size:22px;
+    color:#70777A;
+    font-weight: bolder;
+    
+}
+
+
+#startupbtn{
+    position: relative;
+    float: left;
+    width: 310px;
+    height: 55px;
+    text-align: center;
+
+    margin-top: 34px;
+    margin-left: 0px;
+}
+
+.startbtn{
+    width: 100%;
+    margin-top: -15px;
+}
+
+#startupmess{
+    position: relative;
+    float: left;
+    width: 400px;
+    font-family: '遊ゴシック';
+    font-size:22px;
+    color:#70777A;
+    text-decoration: underline;
+    font-weight: bolder;
+    margin-top: -22px;
+}
+
+/* サービス概要 */
+
+#aboutservice{
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 700px;
+    margin-top: 10px;
+    background-color: rgba(255,255,255,0.1);
+}
+
+#aboutbox{
+    position: relative;
+    margin-top: 250px;
+    height: 450px;
+    background-color: rgba(0,0,0,0.2);
+}
+
+.icon{
+    position: relative;
+    width:100%;
+    float: left;
+    margin-bottom: 25px;
+
+    
+}
+#about1{
+    position: relative;
+    width:15%;
+    height:500px;
+    float: left;
+    margin-left:13.8%;
+    margin-top: -118px;
+    
+}
+
+#about2{
+    position: relative;
+    width:15%;
+    height:500px;
+    float: left;
+    margin-left:13.8%;
+    margin-top: -118px;
+    
+}
+#about3{
+    position: relative;
+    width:15%;
+    height:500px;
+    float: left;
+    margin-left:13.8%;
+    margin-top: -118px;
+    
+}
+
+h3{
+    position: relative;
+    text-align: center;
+    font-family:'遊ゴシック';
+    font-size: 40px;
+    color: #273037;
+}
+
+#aboutbox p{
+    width: 270px;
+    text-align: center;
+    font-size: 20px;
+    font-family:'遊ゴシック';
+    color: #273037;
+    margin-left:-30px;
+    margin-top: -30px;
+}
+
+#footer{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    float: left;
+    background-color: rgba(0,0,0,0.7);
+}
+
+#footer p{
+    color:#273037;
+    float: right;
+    margin-right: 10px;
+}
